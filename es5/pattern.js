@@ -437,6 +437,7 @@ var x = y + 5;
 (function(global) {
   // ...stuff...
 })(this);
+
 /////////////////////////////////////////////
 
 // Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call, not a new statement.
