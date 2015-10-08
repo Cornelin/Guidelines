@@ -273,3 +273,72 @@ function foo (bar) {
 function foo (bar) {
   return bar;
 }
+
+// Use // for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
+
+// bad
+var active = true;  // is current tab
+
+// good
+// is current tab
+var active = true;
+
+// bad
+function getType() {
+  console.log('fetching type...');
+  // set the default type to 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+// good
+function getType() {
+  console.log('fetching type...');
+
+  // set the default type to 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+// Final returns should be preceded by a blank line
+
+// bad
+function sayHello() {
+  console.log('fetching type...');
+  return type;
+}
+
+// good
+function sayHello() {
+  console.log('fetching type...');
+
+  return type;
+}
+
+// Var declarations should be followed by a blank line
+
+// bad
+function sayHello() {
+  var hello = 'Hello World!';
+  console.log(hello);
+  return hello;
+}
+
+// bad
+function sayHello() {
+  var hello = 'Hello World!';
+  console.log(hello);
+
+  return hello;
+}
+
+// good
+function sayHello() {
+  var hello = 'Hello World!';
+
+  console.log(hello);
+
+  return hello;
+}
