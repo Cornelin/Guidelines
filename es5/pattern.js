@@ -276,6 +276,14 @@ function foo (bar) {
 
 // Use // for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
+// When creating a single line comment always follow // by a space
+
+// bad
+//this is a comment
+
+// good
+// this is a comment
+
 // bad
 var active = true;  // is current tab
 
@@ -415,18 +423,57 @@ var x=y+5;
 // good
 var x = y + 5;
 
-//End files with a single newline character.
+//End files with a single newline.
 
 // bad
+/////////////////////////////////////////////
 (function(global) {
   // ...stuff...
 })(this);
-// bad
-(function(global) {
-  // ...stuff...
-})(this);↵
-↵
+/////////////////////////////////////////////
+
 // good
+/////////////////////////////////////////////
 (function(global) {
   // ...stuff...
-})(this);↵
+})(this);
+/////////////////////////////////////////////
+
+// Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call, not a new statement.
+
+// bad
+User.find().tap().then()
+
+// bad
+User.
+  find().
+  tap().
+  then()
+
+// bad
+User
+  .find()
+    .tap()
+      .then()
+
+// bad
+User
+  .find()
+    .tap()
+  .then()
+
+// bad
+User
+  .find().tap()
+  .then()
+
+// bad
+User
+  .find().tap()
+    .then()
+
+// good
+User
+  .find()
+  .tap()
+  .then()
