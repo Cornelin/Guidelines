@@ -406,3 +406,27 @@ dog.set('attr', {
   age: '1 year',
   breed: 'Bernese Mountain Dog'
 });
+
+// Set off operators with spaces.
+
+// bad
+var x=y+5;
+
+// good
+var x = y + 5;
+
+//End files with a single newline character.
+
+// bad
+(function(global) {
+  // ...stuff...
+})(this);
+// bad
+(function(global) {
+  // ...stuff...
+})(this);↵
+↵
+// good
+(function(global) {
+  // ...stuff...
+})(this);↵
