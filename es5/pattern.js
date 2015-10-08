@@ -333,6 +333,9 @@ function Calculator() {
 }
 
 // Final returns should be preceded by a blank line
+// Attention au cas particulier sur les
+// if (true)
+//   return ;
 
 // bad
 function sayHello() {
@@ -478,3 +481,37 @@ User
   .find()
   .tap()
   .then()
+
+// Leave a blank line after blocks and before the next statement
+
+// good
+if (foo)
+  return bar;
+else
+  return baz;
+
+// bad
+if (foo)
+  return bar;
+return baz;
+
+// good
+if (foo)
+  return bar;
+
+return baz;
+
+// bad
+var obj = {
+  foo: function() {},
+  bar: function() {}
+};
+return obj;
+
+// good
+var obj = {
+  foo: function() {},
+  bar: function() {}
+};
+
+return obj;
