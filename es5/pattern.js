@@ -1,3 +1,15 @@
+var foo;
+var bar;
+var baz;
+var qux;
+
+function foo(bar) {
+  var baz;
+  var qux;
+
+  return qux;
+}
+
 function [name]()
 
 function foo() {}
