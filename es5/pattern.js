@@ -5,7 +5,7 @@ var foo = function foo() {}
 
 // Every function even anonymous should be named
 
-(function () {
+(function foo() {
   console.log('Welcome to the Internet. Please follow me.');
 })();
 
@@ -199,7 +199,7 @@ else if (bar)
 else
 	return 42;
 
-// bad
+// good
 if (foo)
 	return true;
 else if (bar)
@@ -209,7 +209,7 @@ else {
 	return 42;
 }
 
-// badd
+// bad
 if (foo) {
 	return true;
 }
@@ -217,7 +217,7 @@ else {
 	return false;
 }
 
-// good
+// bad
 if (foo) {
 	return true;
 } else if (bar) {
@@ -240,12 +240,24 @@ function () {
 // DocBlockr + JSDOCS + Stuffs
 //
 
+// bad
+//
+// function foo returns bar
+//
+// @param  {String} foo
+// @return {String}
+//
+function foo (bar) {
+	return bar;
+}
+
+// good
 /**
  * function foo returns bar
  *
  * @param  {String} foo
- * @return {String}     [description]
+ * @return {String}
  */
 function foo (bar) {
-	return bar;
+  return bar;
 }
