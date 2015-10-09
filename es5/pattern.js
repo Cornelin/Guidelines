@@ -1,3 +1,6 @@
+// All code in any code-base should look like a single person typed it, no
+// matter how many people contributed.
+
 var foo;
 var bar;
 var baz;
@@ -1191,3 +1194,26 @@ console.log( 'Hello World!' );
 
 // good
 console.log('Hello World!');
+
+// http://www.slideshare.net/cheilmann/fronteers-maintainability-presentation
+// http://ajaxian.com/archives/maintainable-javascript-videos-are-now-available
+
+//bad
+toto( { id: 42, name: 'tata' } );
+
+// good
+toto({id: 42, name: 'tata'})
+
+// bad
+var mails = [{email: 'joachim@sparted.com'}, {email: 'lancelot@sparted.com'}];
+
+// bad
+var mails = [ { email: 'joachim@sparted.com' }, { email: 'lancelot@sparted.com' } ];
+
+// good
+var mails = [
+  { email: 'lancelot@sparted.com' },
+  { email: 'joachim@sparted.com' }
+]
+
+// How about big objects in collection ?
