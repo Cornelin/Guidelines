@@ -1180,3 +1180,14 @@ setTimeout(function() {
 // Crazy shit that you will probably never need. Stay away from it.
 
 // AIRBNB ES6
+
+// FORBIDDEN TOO MUCH SPACES
+
+// bad
+console.log ( 'Hello World!' );
+
+// bad
+console.log( 'Hello World!' );
+
+// good
+console.log('Hello World!');
