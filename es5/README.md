@@ -27,8 +27,8 @@
 
   - Use soft tabs set to 2 spaces.
 
+    <span style="color: #f00;">✗</span> bad
     ```javascript
-    // ✗ bad
     function () {
     ∙∙∙∙var name;
     }
