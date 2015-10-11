@@ -75,6 +75,8 @@
 
     :white_check_mark:  __*ok*__
 
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png)
+
 
     ```javascript
     function () {
