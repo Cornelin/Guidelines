@@ -75,7 +75,21 @@
 
     :white_check_mark:  __*ok*__
 
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png)
+    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) bad
+
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) ok
+
+    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) *bad*
+
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) *ok*
+
+    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) **bad**
+
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) **ok**
+
+    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) __*bad*__
+
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) __*ok*__
 
 
     ```javascript
