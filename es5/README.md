@@ -27,18 +27,69 @@
 
   - Use soft tabs set to 2 spaces.
 
-    <span style="color: #f00;">✗</span> bad
+    > ✗ bad
+
+    > ✓ ok
+
+    > *✗ bad*
+
+    > *✓ ok*
+
+    > **✗ bad**
+
+    > **✓ ok**
+
+    > __*✗ bad*__
+
+    > __*✓ ok*__
+
+    - ✗ bad
+
+    - ✓ ok
+
+    - *✗ bad*
+
+    - *✓ ok*
+
+    - **✗ bad**
+
+    - **✓ ok**
+
+    - __*✗ bad*__
+
+    - __*✓ ok*__
+
+    :x:                 bad
+
+    :white_check_mark:  ok
+
+    :x:                 *bad*
+
+    :white_check_mark:  *ok*
+
+    :x:                 **bad**
+
+    :white_check_mark:  **ok**
+
+    :x:                 __*bad*__
+
+    :white_check_mark:  __*ok*__
+
+
     ```javascript
     function () {
     ∙∙∙∙var name;
     }
+    ```
 
-    // ✗ bad
+
+    ```javascript
     function () {
     ∙var name;
     }
+    ```
 
-    // ✓ ok
+    ```javascript
     function () {
     ∙∙var name;
     }
