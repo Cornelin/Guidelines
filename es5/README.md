@@ -27,7 +27,7 @@
 
   - Use soft tabs set to 2 spaces.
 
-    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) bad
+    ![bad](https://raw.githubusercontent.com/Cornelin/Guidelines/master/bad.png) bad
     ```javascript
     function () {
     ∙∙∙∙var name;
@@ -40,7 +40,7 @@
     }
     ```
 
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) ok
+    ![ok](https://raw.githubusercontent.com/Cornelin/Guidelines/master/ok.png) ok
     ```javascript
     function () {
     ∙∙var name;
