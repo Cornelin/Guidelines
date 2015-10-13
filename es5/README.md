@@ -27,7 +27,7 @@
 
   - Use soft tabs set to 2 spaces.
 
-    ![bad](https://raw.githubusercontent.com/Cornelin/Guidelines/master/bad.png) bad
+    ![img_bad] **bad**
     ```javascript
     function () {
     ∙∙∙∙var name;
@@ -40,7 +40,7 @@
     }
     ```
 
-    ![ok](https://raw.githubusercontent.com/Cornelin/Guidelines/master/ok.png) ok
+    ![img_ok] **ok**
     ```javascript
     function () {
     ∙∙var name;
@@ -774,3 +774,7 @@
 
 ## Idea
   1. multi-level prototype hierarchies
+
+
+[img_bad]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/bad.png
+[img_ok]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/ok.png
