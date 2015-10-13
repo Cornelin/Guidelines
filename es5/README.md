@@ -776,5 +776,5 @@
   1. multi-level prototype hierarchies
 
 
-[img_bad]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/bad.png
-[img_ok]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/ok.png
+[img_bad]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/img/bad.png
+[img_ok]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/img/ok.png
