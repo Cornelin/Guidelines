@@ -27,7 +27,7 @@
 
   - Use soft tabs set to 2 spaces.
 
-    ![img_bad] **bad**
+    ![img_bad] _**bad**_
     ```javascript
     function () {
     ∙∙∙∙var name;
@@ -40,7 +40,7 @@
     }
     ```
 
-    ![img_ok] **ok**
+    ![img_ok] _**ok**_
     ```javascript
     function () {
     ∙∙var name;
