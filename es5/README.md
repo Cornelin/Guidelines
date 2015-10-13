@@ -27,77 +27,12 @@
 
   - Use soft tabs set to 2 spaces.
 
-    > ✗ bad
-
-    > ✓ ok
-
-    > *✗ bad*
-
-    > *✓ ok*
-
-    > **✗ bad**
-
-    > **✓ ok**
-
-    > __*✗ bad*__
-
-    > __*✓ ok*__
-
-    - ✗ bad
-
-    - ✓ ok
-
-    - *✗ bad*
-
-    - *✓ ok*
-
-    - **✗ bad**
-
-    - **✓ ok**
-
-    - __*✗ bad*__
-
-    - __*✓ ok*__
-
-    :x:                 bad
-
-    :white_check_mark:  ok
-
-    :x:                 *bad*
-
-    :white_check_mark:  *ok*
-
-    :x:                 **bad**
-
-    :white_check_mark:  **ok**
-
-    :x:                 __*bad*__
-
-    :white_check_mark:  __*ok*__
-
     ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) bad
-
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) ok
-
-    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) *bad*
-
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) *ok*
-
-    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) **bad**
-
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) **ok**
-
-    ![close](https://raw.githubusercontent.com/Cornelin/Guidelines/master/close.png) __*bad*__
-
-    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) __*ok*__
-
-
     ```javascript
     function () {
     ∙∙∙∙var name;
     }
     ```
-
 
     ```javascript
     function () {
@@ -105,6 +40,7 @@
     }
     ```
 
+    ![check](https://raw.githubusercontent.com/Cornelin/Guidelines/master/checkmark.png) ok
     ```javascript
     function () {
     ∙∙var name;
