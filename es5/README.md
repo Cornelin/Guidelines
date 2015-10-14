@@ -2,6 +2,7 @@
 
 ##Table of Contents
 
+  1. [Why follow guidelines?](#why-follow-guidelines?)
   1. [Development Environment](#development-environment)
   1. [Whitespace](#whitespace)
   1. [Create a file](#create-a-file)
@@ -17,11 +18,19 @@
   1. [Comments](#comments)
   1. [Type casting and coercion](#type-casting-and-coercion)
 
+## Why follow guidelines?
+
+  - Readability
+
+  - Maintenance
+
+  - Team working
+
 ## Development Environment
 
-  - We recommend using [Sublime Text 3](http://www.sublimetext.com/3).
+  - We recommend using [Sublime Text 3][Sublime-Text-3].
 
-  - We highly recommend using the linter [eslint](http://eslint.org). Download the .eslintrc we use [here]().
+  - We highly recommend using the linter [eslint][eslint]. Download the .eslintrc we use [here]().
 
 ## Whitespace
 
@@ -34,6 +43,7 @@
     }
     ```
 
+    ![img_bad] _**bad**_
     ```javascript
     function () {
     ∙var name;
@@ -49,24 +59,30 @@
 
   - Place 1 space before the leading brace.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     function test(){
       console.log('test');
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function test() {
       console.log('test');
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     dog.set('attr',{
       age  : '1 year',
       breed: 'Bernese Mountain Dog'
     });
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     dog.set('attr', {
       age  : '1 year',
       breed: 'Bernese Mountain Dog'
@@ -75,77 +91,91 @@
 
   - Set off operators with spaces.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var x=y+5;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var x = y + 5;
     ```
 
-  - End file with a single newline
+  - End file with a single newline.
 
-    - ✗ bad
-      ```javascript
-      1.  (function(env) {
-      2.    ...
-      3.  })(this);
-      ```
+    ![img_bad] _**bad**_
+    ```javascript
+    1.  (function(env) {
+    2.    ...
+    3.  })(this);
+    ```
 
-    - ✗ bad
-      ```javascript
-      1.  (function(env) {
-      2.    ...
-      3.  })(this);
-      4.
-      5.
-      ```
+    ![img_bad] _**bad**_
+    ```javascript
+    1.  (function(env) {
+    2.    ...
+    3.  })(this);
+    4.
+    5.
+    ```
 
-    - ✓ ok
-      ```javascript
-      1.  (function(env) {
-      2.    ...
-      3.  })(this);
-      4.
-      ```
+    ![img_ok] _**ok**_
+    ```javascript
+    1.  (function(env) {
+    2.    ...
+    3.  })(this);
+    4.
+    ```
 
   - Use indentation when making long method chains. Use a leading dot, which emphasizes that the line is a method call, not a new statement.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
-    User.find().tap().then();
+    User.findOne().tap().then();
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     User.
-      find().
+      findOne().
       tap().
       then();
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     User
-      .find()
+      .findOne()
         .tap()
           .then();
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     User
-      .find()
+      .findOne()
         .tap()
       .then();
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     User
-      .find().tap()
+      .findOne().tap()
       .then();
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     User
-      .find().tap()
+      .findOne().tap()
         .then();
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     User
-      .find()
+      .findOne()
       .tap()
       .then();
     ```
@@ -186,23 +216,27 @@
 
   - Always use `var` to declare variables.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     truth = 42;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var truth = 42;
     ```
 
   - Use one `var` per variable.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var x = 12,
         y = 24,
         z = 42;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var x = 12;
     var y = 24;
     var z = 42;
@@ -210,14 +244,16 @@
 
   - Declare unassigned variables last.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var vector;
     var x = 12;
     var y = 24;
     var z = 42;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var x = 12;
     var y = 24;
     var z = 42;
@@ -226,22 +262,24 @@
 
   - Declare variables at the top of their scope.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     function joinDarkSide(character) {
       kneelBeforeEmperor(character);
 
-      var name = character.name();
+      var name = character.firstname();
 
       if (name == 'Yoda')
         return false;
 
       return true;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function joinDarkSide(character) {
-      var name = character.name();
+      var name = character.firstname();
 
       kneelBeforeEmperor(character);
 
@@ -250,10 +288,12 @@
 
       return true;
     }
+    ```
 
-    // ✗ bad - unnecessary function call
+    ![img_bad] _**bad**_ - _unnecessary function call_
+    ```javascript
     function joinDarkSide(character) {
-      var name = character.name();
+      var name = character.firstname();
 
       if (character.isSith())
         return true;
@@ -265,8 +305,10 @@
 
       return true;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function joinDarkSide(character) {
       var name;
 
@@ -275,7 +317,7 @@
 
       kneelBeforeEmperor(character);
 
-      name = character.name()
+      name = character.firstname();
 
       if (name == 'Yoda')
         return false;
@@ -288,36 +330,44 @@
 
 ### if-else
 
-  - Don't use braces or inline code for one-line action
+  - Don't use braces or inline code for one-line action.
 
+    ![img_bad] _**bad**_
     ```javascript
     var test = 42;
 
-    // ✗ bad
     if (test > 0) {
       test++;
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     if (test > 0) test++;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     if (test > 0)
       test++;
     ```
 
-  - Use braces for multi-lines action
+  - Use braces for multi-lines action.
 
     ```javascript
     var array = [10, 42];
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     if (array[1] > 0)
       array = array.map(function(item) {
         return item++;
       });
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     if (array[1] > 0) {
       array = array.map(function(item) {
         return item++;
@@ -327,49 +377,61 @@
 
 ### for
 
-  - Cache variables used for condition
+  - Cache variables used for condition.
 
     ```javascript
     var array = [10, 42];
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     for (var i = 0; i < array.length; i++)
       array[i] += 2;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     for (var i = 0, len = array.length; i < len; i++)
       array[i] += 2;
     ```
 
-  - When loop direction doesn't matter, use improved form
+  - When loop direction doesn't matter, use improved form.
 
     ```javascript
     var array = [10, 42];
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     for (var i = 0, len = array.length; i < len; i++)
       array[i] += 2;
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     for (var i = array.length - 1; i >= 0; i--)
       array[i] += 2;
     ```
 
 ### while / do-while
 
-  - Cache variables used for condition
+  - Cache variables used for condition.
 
     ```javascript
     var array = [10, 42];
     var i = 0;
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     while (i < array.length) {
       array[i] += 2;
       i++;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var len = array.length;
 
     while (i < len) {
@@ -382,23 +444,27 @@
 
   - Use the literal syntax for object creation.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var item = new Object();
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var item = {};
     ```
 
   - Place 1 whitespace after the colons.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var luke = {
       jediMaster:true
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var luke = {
       jediMaster: true
     };
@@ -406,14 +472,16 @@
 
   - Align colons on the most distant colon. Don't place whitespace before the most distant colon.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var luke = {
       jediMaster: true,
       age: 28
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var luke = {
       jediMaster: true,
       age       : 28
@@ -425,14 +493,16 @@
     - It can lead to readability issues.
     - Most of editor / IDE syntactically color them.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var item = {
       class  : 'name',
       private: true
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var item = {
       type  : 'name',
       hidden: true
@@ -441,13 +511,15 @@
 
   - When possible, use valid identifier for your properties names.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var item = {
       'class-name': 'name';
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var item = {
       type: 'name'
     };
@@ -455,20 +527,24 @@
 
   - Use readable synonyms in camelCase in place of reserved words.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var item = {
       class       : 'name',
       'is-private': true
     };
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     var item = {
       klass       : 'name',
       'is-private': true
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var item = {
       type     : 'name',
       isPrivate: true
@@ -482,15 +558,19 @@
       jediMaster: true,
       age       : 28
     };
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     var isJedi = luke['jediMaster'];
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var isJedi = luke.jediMaster;
     ```
 
-  - Use subscript notation [] when accessing properties with a variable
+  - Use subscript notation [] when accessing properties with a variable.
 
     ```javascript
     var luke = {
@@ -507,23 +587,29 @@
 
   - Use the literal syntax for object creation.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var items = new Array();
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var items = [];
     ```
 
-  - To add items to an array, use Array#push
+  - To add items to an array, use `Array#push`.
 
     ```javascript
     var items = [];
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     items[items.length] = 'item';
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     items.push('item');
     ```
 
@@ -531,46 +617,56 @@
 
   - Use simple quote instead of double.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var authors = "Nicolas Prigent and Joachim Westphal";
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var authors = 'Nicolas Prigent and Joachim Westphal';
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     var principle = "It'll spread in the entire world";
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var principle = 'It\'ll spread in the entire world';
     ```
 
 ## Functions
 
-  - Place 1 space after the 'function' keyword.
+  - Place 1 space after `function`.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     (function() {
       ...
     })();
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     (function () {
       ...
     })();
 
     ```
 
-  - Always name your function, it makes stack traces more reliables.
+  - Always name your functions, it makes stack traces more reliables.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var foo = function () {
       ...
     };
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var foo = function foo() {
       ...
     };
@@ -578,15 +674,17 @@
 
   - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     if (...) {
       function toto() {
         ...
       }
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var toto;
 
     if (...) {
@@ -596,32 +694,36 @@
     }
     ```
 
-  - Never name a parameter arguments. This will take precedence over the arguments object that is given to every function scope
+  - Never name a parameter arguments. This will take precedence over the arguments object that is given to every function scope.
 
     <!-- FIXME: Need better naming -->
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     function toto(yolo, arguments) {
       ...
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function toto(yolo, args) {
       ...
     }
     ```
 
-  - `var` declarations should be followed by a blank line
+  - `var` declarations should be followed by a blank line.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     function sayHello() {
       var hello = 'Hello world!';
       console.log(hello);
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function sayHello() {
       var hello = 'Hello world!';
 
@@ -629,18 +731,20 @@
     }
     ```
 
-  - Returns should be preceded by a blank line, except for unique `return` in a statement block
+  - Returns should be preceded by a blank line, except for unique `return` in a statement block.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     function sayHello() {
       var hello = 'Hello world!';
 
       console.log(hello);
       return hello;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function sayHello() {
       var hello = 'Hello world!';
 
@@ -648,8 +752,10 @@
 
       return hello;
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     function isJediMaster(character) {
       if (character.force > 50) {
 
@@ -657,29 +763,37 @@
       }
       return false;
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     function isJediMaster(character) {
       if (character.force > 50)
         return true;
       return false;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function isJediMaster(character) {
       if (character.force > 50)
         return true;
 
       return false;
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     function isJediMaster(character) {
 
       return character.force > 50;
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     function isJediMaster(character) {
       return character.force > 50;
     }
@@ -687,47 +801,55 @@
 
 ## Comments
 
-  - Use `//` for single line comments
+  - Use `//` for single line comments.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     /* This is a comment */
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     // This is a comment
     ```
 
-  - Place a whitespace after `//`
+  - Place a whitespace after `//`.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     //This is a comment
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     // This is a comment
     ```
 
   - Place single line comments on a newline above the subject of the comment.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var active = true; // is current tab
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     // is current tab
     var active = true;
     ```
 
   - Place an empty line before the comments.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     var active = getActiveTab();
     // verify there is a active tab
     if (active)
       ...
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     var active = getActiveTab();
 
     // verify there is a active tab
@@ -737,25 +859,31 @@
 
 ## Type casting and coercion
 
-  - Use shortcuts
+  - Use shortcuts.
 
+    ![img_bad] _**bad**_
     ```javascript
-    // ✗ bad
     if (name !== '') {
       ...
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     if (name) {
       ...
     }
+    ```
 
-    // ✗ bad
+    ![img_bad] _**bad**_
+    ```javascript
     if (collection.length > 0) {
       ...
     }
+    ```
 
-    // ✓ ok
+    ![img_ok] _**ok**_
+    ```javascript
     if (collection.length) {
       ...
     }
@@ -778,3 +906,6 @@
 
 [img_bad]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/img/bad.png
 [img_ok]:https://raw.githubusercontent.com/Cornelin/Guidelines/master/img/ok.png
+
+[Sublime-Text-3]:http://www.sublimetext.com/3
+[eslint]:http://eslint.org
