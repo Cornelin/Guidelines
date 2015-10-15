@@ -15,16 +15,32 @@
   1. [Arrays](#arrays)
   1. [Strings](#strings)
   1. [Functions](#functions)
+  1. [Promises](#Promises)
   1. [Comments](#comments)
   1. [Type casting and coercion](#type-casting-and-coercion)
+  1. [Constructors, inheritance and prototype](#constructors-inheritance-and-prototype)
 
 ## Why follow guidelines?
 
-  - Readability
+### Readability
 
-  - Maintenance
+  Most of the following advices are about readability. They are designed to improve understanding of your code, allowing you to identify clearly and quickly the sense of your logic.
 
-  - Team working
+### Maintainability
+
+  Following guidelines will improve the consistency of your code. Thus, you'll not be lost by taking a piece of code written 6 months ago.
+
+### Team working
+
+  Within a team, it is important to have a common language to communicate effectively. The guidelines are this common language.
+
+### Best practices
+
+  These guidelines will show you some best practices we highly recommend you to use and abuse. Once your fingers have memorized them, you will no longer need to think about it.
+
+### Just for fun!
+
+
 
 ## Development Environment
 
@@ -856,6 +872,8 @@
     if (active)
       ...
     ```
+
+## Promises
 
 ## Type casting and coercion
 
