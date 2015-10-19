@@ -1217,3 +1217,28 @@ var mails = [
 ]
 
 // How about big objects in collection ?
+
+// Don't do this !!!!
+// Don't do this !!!!
+// Don't do this !!!!
+// Don't do this !!!!
+
+self.placeholder = args.placeholder
+                || (
+                	(
+                	(args.legend && args.legend + ' ')
+                || '')
+              + 'Nothing selected');
+
+args.placeholder
+
+args.legend + ' ' + Nothing selected
+
+Nothing selected
+
+if (args.placeholder)
+	self.placeholder = args.placeholder;
+else if (args.legend)
+	self.placeholder = (args.legend || '') + 'Nothing selected';
+	
+// Don't do this !!!!
